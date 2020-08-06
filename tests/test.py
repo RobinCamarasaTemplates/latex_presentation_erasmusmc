@@ -15,11 +15,13 @@
 
 """
 import sys
+import os
 from datetime import datetime
 import pytest
 import shutil
 from pathlib import Path
 from cookiecutter import main
+import subprocess
 
 
 ROOT = Path(__file__).parents[1]
@@ -76,5 +78,11 @@ def test_generate_project() -> None:
         TESTS_ROOT / project_name / 'images' / 'logo.png'
     ).exists()
 
-
+    # Test compilation
+    process = subprocess.Popen(
+        ['pdflatex', 'presentation.tex'],
+        cwd=(TESTS_ROOT / project_name).resolve()
+    )
+    process.wait()
+    assert (TESTS_ROOT / project_name / 'presentation.pdf')
 

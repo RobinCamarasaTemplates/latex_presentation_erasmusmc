@@ -33,3 +33,7 @@ $ pip install -r requirements.txt
 ```bash
 $ pytest tests/test.py
 ```
+
+## Authors
+The following authors contributed :
+- [{{ cookiecutter.package_name }}]({{ cookiecutter.github }})
