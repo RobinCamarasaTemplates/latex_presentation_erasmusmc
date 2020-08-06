@@ -1,0 +1,146 @@
+\newcommand{\numbered}{
+    \setbeamertemplate{footline}{
+        \raisebox{5pt}{
+            \makebox[\paperwidth]{
+                \hfill
+                \makebox[15pt]{
+                    \large\insertframenumber
+                }
+                \hspace{5pt}
+            }
+        }
+    }
+}
+
+\newcommand{\unumbered}{
+    \setbeamertemplate{footline}{
+        \raisebox{5pt}{
+            \makebox[\paperwidth]{
+                \hfill
+                \makebox[15pt]{}
+                \hspace{15pt}
+            }
+        }
+    }
+}
+
+
+\newcommand{\customframe}[1]{
+    \begin{frame}
+        \frametitle{\insertsubsection}
+        #1
+    \end{frame}
+}
+
+\newcommand{\introframe}[1]{
+    \begin{frame}
+        \frametitle{Introduction}
+        #1
+    \end{frame}
+}
+
+
+\newcommand{\conclusionframe}[1]{
+    \begin{frame}
+        \frametitle{conclusion}
+        #1
+    \end{frame}
+}
+
+
+\newcommand{\beginframes}{
+    \unumbered
+    \begin{frame}[noframenumbering]
+        \titlepage
+    \end{frame}
+    \numbered
+    \begin{frame}{\contentsname}
+        \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \tableofcontents[sections={1-3}]
+            \end{column}
+            \begin{column}{.5\textwidth}
+                \tableofcontents[sections={4-6}]
+            \end{column}
+        \end{columns}
+    \end{frame}
+}
+
+
+\newcommand{\insertfigure}[2]{
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{
+        #1
+    }
+    \caption{
+        #2
+    }
+\end{figure}
+}
+
+
+\AtBeginSection[]{
+    \begin{frame}{\contentsname}
+        \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \tableofcontents[sections={1-3}, currentsection]
+            \end{column}
+            \begin{column}{.5\textwidth}
+                \tableofcontents[sections={4-6}, currentsection]
+            \end{column}
+        \end{columns}
+    \end{frame}
+}
+
+
+
+\AtEndDocument{
+    \begin{frame}
+        \centering
+        \Huge Thank you for your attention
+
+       \begin{columns}[t]
+           \begin{column}{.1\textwidth}
+           \end{column}
+           \begin{column}{.9\textwidth}
+                \begin{itemize}
+                    \small
+                    \item[\faEnvelope]{
+                        \href{
+                            mailto:{{ cookiecutter.author_mail }}
+                        }
+                        {
+                            {{ cookiecutter.author_mail }}
+                        }
+                    }
+                    \item[\faUser]{
+                        \href{
+                            {{ cookiecutter.author_website }}
+                        }
+                        {
+                            {{ cookiecutter.author_website }}
+                        }
+                    }
+                    \item[\faGithubAlt]{
+                        \href{
+                            {{ cookiecutter.author_github }}
+                        }
+                        {
+                            {{ cookiecutter.author_github }}
+                        }
+                    }
+                    \item[\faGraduationCap]{
+                        \href{
+                            {{ cookiecutter.author_scholar }}
+                        }
+                        {
+                            {{ cookiecutter.author_scholar }}
+                        }
+                    }
+
+                \end{itemize}
+           \end{column}
+        \end{columns}
+    \end{frame}
+}

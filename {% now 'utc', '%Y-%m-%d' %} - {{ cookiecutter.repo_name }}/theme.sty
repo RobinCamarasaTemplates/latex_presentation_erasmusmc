@@ -1,0 +1,28 @@
+% Define theme
+\mode<presentation> {
+    \usetheme{Madrid}
+    \useinnertheme{circles}
+    \setbeamertemplate{navigation symbols}{}
+}
+
+% Set footline size
+\setbeamerfont{footline}{size=\bf\small}
+\setbeamercolor{footline}{fg=black}
+
+% Define main color
+\definecolor{Maincolor}{RGB}{12, 33, 116}
+\usecolortheme[named=Maincolor]{structure}
+
+
+%  Define logo position
+\logo{\pgfputat{\pgfxy(-11.5,-0.5)}{\pgfbox[center,base]{\includegraphics[width=2cm]{images/logo.png}}}}
+
+% Define presentation attributes
+\author{
+    {{ cookiecutter.author_names }}
+}
+\institute[EMSE] 
+{
+    \tiny {{ cookiecutter.author_institutions }}
+}
+\date{\today}

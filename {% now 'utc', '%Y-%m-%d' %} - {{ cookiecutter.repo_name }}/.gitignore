@@ -1,0 +1,11 @@
+*.log
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
+presentation.tex
