@@ -36,4 +36,4 @@ $ pytest tests/test.py
 
 ## Authors
 The following authors contributed :
-- [{{ cookiecutter.package_name }}]({{ cookiecutter.github }})
+- [Robin Camarasa](https://github.com/RobinCamarasa)
