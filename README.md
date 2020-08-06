@@ -18,8 +18,18 @@ $ conda install cookiecutter
 ```
 
 
-## To start a new project, run:
+## To start a new project, run
 ``` bash
 $ cookiecutter https://github.com/bigrphdrobincamarasa/latex_presentation_erasmusmc.git
 ```
 
+## To contribute
+- Install the requirement
+```bash
+$ pip install -r requirements.txt
+```
+
+- Make sure that your modification works
+```bash
+$ pytest tests/test.py
+```
