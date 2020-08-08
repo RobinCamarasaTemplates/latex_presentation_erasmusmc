@@ -27,7 +27,8 @@ import subprocess
 ROOT = Path(__file__).parents[1]
 TESTS_ROOT = ROOT / 'test_output'
 EXTRA_CONTEXT = {
-    "repo_name": "Latex",
+    "project_name": "Latex",
+    "repo_name": "latex",
     "author_names": 'John Doe',
     "author_institutions": 'Inst1, Inst2',
 
@@ -61,7 +62,7 @@ def test_generate_project() -> None:
     )
 
     # Test project generation
-    project_name = '{} - Latex'.format(
+    project_name = '{}-latex'.format(
         datetime.now().strftime('%Y-%m-%d')
     )
     assert (TESTS_ROOT / project_name).exists()
