@@ -1,7 +1,6 @@
 {
     "project_name": "Project name",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "repo_name": "Project name",
     "author_names": "Author names",
     "author_institutions": "Author institutions",
 
