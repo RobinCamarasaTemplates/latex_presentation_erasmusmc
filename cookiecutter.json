@@ -1,6 +1,7 @@
 {
     "project_name": "Project name",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "presentation_date": "{% now 'utc', '%Y-%m-%d' %}",
+    "repo_name": "{{ cookiecutter.presentation_date }}-{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_names": "Author names",
     "author_institutions": "Author institutions",
 
@@ -9,3 +10,4 @@
     "author_scholar": "Your sholar",
     "author_website": "Your website"
 }
+

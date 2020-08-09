@@ -28,7 +28,6 @@ ROOT = Path(__file__).parents[1]
 TESTS_ROOT = ROOT / 'test_output'
 EXTRA_CONTEXT = {
     "project_name": "Latex",
-    "repo_name": "latex",
     "author_names": 'John Doe',
     "author_institutions": 'Inst1, Inst2',
 
