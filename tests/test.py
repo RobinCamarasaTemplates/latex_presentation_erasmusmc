@@ -86,3 +86,11 @@ def test_generate_project() -> None:
     process.wait()
     assert (TESTS_ROOT / project_name / 'presentation.pdf')
 
+    # Test compilation
+    process = subprocess.Popen(
+        ['make'],
+        cwd=(TESTS_ROOT / project_name).resolve()
+    )
+    process.wait()
+    assert process.returncode == 0
+
